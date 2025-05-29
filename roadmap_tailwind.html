@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roadmap Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="statics/scripts.js" defer></script>
+    <link rel="stylesheet" href="statics/styles.css">
+    <!-- Visualization & Content Choices: 
+        - Report Info: Daily learning tasks. Goal: Track completion. Viz/Presentation: Card with details and checkbox. Interaction: Click checkbox to mark complete, updates progress bar and item style. Justification: Direct and intuitive for task management. Library/Method: HTML/CSS/JS.
+        - Report Info: Weekly/Overall progress. Goal: Visualize progress. Viz/Presentation: Horizontal progress bar. Interaction: Updates automatically on task completion. Justification: Clear visual feedback. Library/Method: HTML/CSS (Tailwind width utilities) + JS.
+        - Report Info: Main sections (Week 1, 2, 3, Tips). Goal: Navigate content. Viz/Presentation: Tab-like buttons. Interaction: Click to switch views. Justification: Common and intuitive SPA navigation. Library/Method: HTML/CSS/JS.
+        - CONFIRMATION: NO SVG graphics used. NO Mermaid JS used.
+    -->
+</head>
+<body class="bg-slate-50 text-slate-700 min-h-screen flex flex-col items-center p-4 sm:p-8">
+
+    <div class="container w-full max-w-5xl mx-auto bg-white shadow-xl rounded-lg p-6 sm:p-10">
+        <header class="text-center mb-8">
+            <h1 id="mainTitle" class="text-3xl sm:text-4xl font-bold text-sky-700"></h1>
+            <p id="mainIntroduction" class="mt-2 text-sm sm:text-base text-slate-600"></p>
+        </header>
+
+        <nav class="mb-8">
+            <ul class="flex flex-wrap justify-center border-b border-slate-300 pb-2">
+                <li class="mr-1 mb-1"><button id="tabWeek1" data-tab="week1" class="tab-button py-2 px-4 rounded-t-lg font-medium hover:bg-sky-100 focus:outline-none focus:ring-2 focus:ring-sky-500">Semana 1</button></li>
+                <li class="mr-1 mb-1"><button id="tabWeek2" data-tab="week2" class="tab-button py-2 px-4 rounded-t-lg font-medium hover:bg-sky-100 focus:outline-none focus:ring-2 focus:ring-sky-500">Semana 2</button></li>
+                <li class="mr-1 mb-1"><button id="tabWeek3" data-tab="week3" class="tab-button py-2 px-4 rounded-t-lg font-medium hover:bg-sky-100 focus:outline-none focus:ring-2 focus:ring-sky-500">Semana 3</button></li>
+                <li class="mb-1"><button id="tabExtraTips" data-tab="extraTips" class="tab-button py-2 px-4 rounded-t-lg font-medium hover:bg-sky-100 focus:outline-none focus:ring-2 focus:ring-sky-500">Consejos Extra</button></li>
+            </ul>
+        </nav>
+
+        <main id="contentArea" class="min-h-[300px]">
+            
+        </main>
+
+        <section id="overallProgressSection" class="mt-10 pt-6 border-t border-slate-300">
+            <h2 class="text-xl font-semibold text-slate-700 mb-3">Progreso Total del Roadmap</h2>
+            <div class="w-full progress-bar-bg rounded-full h-6 overflow-hidden">
+                <div id="overallProgressBar" class="progress-bar-fill h-full rounded-full text-xs text-white flex items-center justify-center" style="width: 0%;">0%</div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
